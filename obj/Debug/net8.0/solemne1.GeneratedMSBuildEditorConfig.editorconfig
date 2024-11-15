@@ -17,39 +17,59 @@ build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = solemne1
 build_property.RootNamespace = solemne1
-build_property.ProjectDir = C:\Users\User\solemne1\
+build_property.ProjectDir = C:\Users\danvi\solemne1\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 8.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\User\solemne1
+build_property.MSBuildProjectDirectory = C:\Users\danvi\solemne1
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/User/solemne1/Pages/Error.cshtml]
+[C:/Users/danvi/solemne1/Pages/Account/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWNjb3VudFxMb2dpbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/danvi/solemne1/Pages/Dashboard.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRGFzaGJvYXJkLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/danvi/solemne1/Pages/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXJyb3IuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/User/solemne1/Pages/Index.cshtml]
+[C:/Users/danvi/solemne1/Pages/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/User/solemne1/Pages/Privacy.cshtml]
+[C:/Users/danvi/solemne1/Pages/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJpdmFjeS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/User/solemne1/Pages/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/danvi/solemne1/Pages/Records/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUmVjb3Jkc1xDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/danvi/solemne1/Pages/Records/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUmVjb3Jkc1xFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/danvi/solemne1/Pages/Records/List.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUmVjb3Jkc1xMaXN0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/danvi/solemne1/Pages/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/User/solemne1/Pages/_ViewImports.cshtml]
+[C:/Users/danvi/solemne1/Pages/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/User/solemne1/Pages/_ViewStart.cshtml]
+[C:/Users/danvi/solemne1/Pages/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/User/solemne1/Pages/Shared/_Layout.cshtml]
+[C:/Users/danvi/solemne1/Pages/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-ithpd7odfb

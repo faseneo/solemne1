@@ -1,0 +1,19 @@
+@page
+@model CreateModel
+@{
+    ViewData["Title"] = "Create New Record";
+}
+
+<h2>Create New Record</h2>
+
+<form method="post">
+    <div>
+        <label>Name:</label>
+        <input asp-for="Record.Name" required />
+    </div>
+    <div>
+        <label>Description:</label>
+        <input asp-for="Record.Description" required />
+    </div>
+    <button type="submit">Create</button>
+</form>

@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\solemne1.props" />
+</Project>

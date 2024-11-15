@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\User\\solemne1\\solemne1.csproj": {}
+    "C:\\Users\\danvi\\solemne1\\solemne1.csproj": {}
   },
   "projects": {
-    "C:\\Users\\User\\solemne1\\solemne1.csproj": {
+    "C:\\Users\\danvi\\solemne1\\solemne1.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\User\\solemne1\\solemne1.csproj",
+        "projectUniqueName": "C:\\Users\\danvi\\solemne1\\solemne1.csproj",
         "projectName": "solemne1",
-        "projectPath": "C:\\Users\\User\\solemne1\\solemne1.csproj",
-        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\User\\solemne1\\obj\\",
+        "projectPath": "C:\\Users\\danvi\\solemne1\\solemne1.csproj",
+        "packagesPath": "C:\\Users\\danvi\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\danvi\\solemne1\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\danvi\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -22,6 +22,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -79,7 +80,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.404/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.403/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
