@@ -1,0 +1,30 @@
+
+@page
+@model ListRolModel
+@{
+    ViewData["Title"] = "List of Rol";
+}
+
+<h2>Roles</h2>
+<a asp-page="CreateRol">Nuevo Rol</a>
+<table>
+    <thead>
+        <tr>
+            <th>NombreRol</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var Rol in Model.Roles)
+        {
+            <tr>
+                <td>@Rol.NombreRol</td>
+          
+                <td>
+                    <a asp-page="EditRol" asp-route-id="@Rol.Id">Editar</a>
+                    <a asp-page-handler="Delete" asp-route-id="@Rol.Id" onclick="return confirm('Estas Seguro?');">Borrar</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+

@@ -1,0 +1,27 @@
+@page
+@model CreateEsModel
+@{
+    ViewData["Title"] = "Create New Estudiante";
+}
+
+<h2>Create New Estudiante</h2>
+
+<form method="post">
+    <div>
+        <label>Nombre:</label>
+        <input asp-for="Estudiante.Nombre" required />
+    </div>
+    <div>
+        <label>Apellido:</label>
+        <input asp-for="Estudiante.Apellido" required />
+    </div>
+    <div>
+        <label>Email:</label>
+        <input asp-for="Estudiante.Email" required />
+    </div>
+    <div>
+        <label>Edad:</label>
+        <input asp-for="Estudiante.Edad" required />
+    </div>
+    <button type="submit">Create</button>
+</form>

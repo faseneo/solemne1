@@ -1,0 +1,36 @@
+
+@page
+@model ListUsModel
+@{
+    ViewData["Title"] = "List of Usuarios";
+}
+
+<h2>Usuarios</h2>
+<a asp-page="CreateUs">Nuevo Usuario</a>
+<table>
+    <thead>
+        <tr>
+            <th>Nombre</th>
+            <th>Apellido</th>
+            <th>Email</th>
+            <th>Contraseña</th>
+            <th>Rol</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var Usuario in Model.Usuarios)
+        {
+            <tr>
+                <td>@Usuario.Nombre</td>
+                <td>@Usuario.Apellido</td>
+                <td>@Usuario.Email</td>
+                <td>@Usuario.Password</td>
+                <td>@Usuario.Rol</td>
+                <td>
+                    <a asp-page="EditUs" asp-route-id="@Usuario.Id">Editar</a>
+                    <a asp-page-handler="Delete" asp-route-id="@Usuario.Id" onclick="return confirm('Estas Seguro?');">Borrar</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

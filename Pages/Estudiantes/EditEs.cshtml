@@ -1,0 +1,28 @@
+@page
+@model EditEsModel
+@{
+    ViewData["Title"] = "Edit Estudiante";
+}
+
+<h2>Edit Estudiante</h2>
+
+<form method="post">
+    <input type="hidden" asp-for="Estudiante.Id" />
+    <div>
+        <label>Name:</label>
+        <input asp-for="Estudiante.Nombre" />
+    </div>
+    <div>
+        <label>Apellido:</label>
+        <input asp-for="Estudiante.Apellido" />
+    </div>
+    <div>
+        <label>Email:</label>
+        <input asp-for="Estudiante.Email" />
+    </div>
+    <div>
+        <label>Edad:</label>
+        <input asp-for="Estudiante.Edad" />
+    </div>
+    <button type="submit">Save</button>
+</form>
