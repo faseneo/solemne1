@@ -1,28 +1,21 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
-using Microsoft.EntityFrameworkCore;
 using System.Threading.Tasks;
 
-public class EditModel : PageModel
+public class CreateRolModel : PageModel
 {
     private readonly ApplicationDbContext _context;
 
-    public EditModel(ApplicationDbContext context)
+    public CreateRolModel(ApplicationDbContext context)
     {
         _context = context;
     }
 
     [BindProperty]
-    public Record Record { get; set; }
+    public Rol Rol { get; set; }
 
-    public async Task<IActionResult> OnGetAsync(int id)
+    public void OnGet()
     {
-        Record = await _context.Records.FindAsync(id);
-        if (Record == null)
-        {
-            return NotFound();
-        }
-        return Page();
     }
 
     public async Task<IActionResult> OnPostAsync()
@@ -32,7 +25,7 @@ public class EditModel : PageModel
             return Page();
         }
 
-        _context.Attach(Record).State = EntityState.Modified;
+        _context.Roles.Add(Rol);
         await _context.SaveChangesAsync();
         return RedirectToPage("List");
     }

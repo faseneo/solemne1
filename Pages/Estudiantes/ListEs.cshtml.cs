@@ -4,32 +4,30 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 
-public class ListModel : PageModel
+public class ListEsModel : PageModel
 {
     private readonly ApplicationDbContext _context;
 
-    public ListModel(ApplicationDbContext context)
+    public ListEsModel(ApplicationDbContext context)
     {
         _context = context;
     }
 
-    public List<Record> Records { get; set; } = new List<Record>();
+    public List<Estudiante> Estudiantes { get; set; } = new List<Estudiante>();
 
     public async Task OnGetAsync()
     {
-        Records = await _context.Records.ToListAsync(); // Carga los registros desde la base de datos
+        Estudiantes = await _context.Estudiantes.ToListAsync(); // Carga los registros desde la base de datos
     }
 
     public async Task<IActionResult> OnGetDeleteAsync(int id)
     {
-        var record = await _context.Records.FindAsync(id);
-        if (record != null)
+        var estudiante = await _context.Estudiantes.FindAsync(id);
+        if (estudiante != null)
         {
-            _context.Records.Remove(record);
+            _context.Estudiantes.Remove(estudiante);
             await _context.SaveChangesAsync();
         }
         return RedirectToPage();
-    }
-
-    
+    }    
 }

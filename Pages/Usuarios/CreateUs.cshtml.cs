@@ -2,17 +2,17 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using System.Threading.Tasks;
 
-public class CreateModel : PageModel
+public class CreateUsModel : PageModel
 {
     private readonly ApplicationDbContext _context;
 
-    public CreateModel(ApplicationDbContext context)
+    public CreateUsModel(ApplicationDbContext context)
     {
         _context = context;
     }
 
     [BindProperty]
-    public Record Record { get; set; }
+    public Usuario Usuario { get; set; }
 
     public void OnGet()
     {
@@ -25,8 +25,8 @@ public class CreateModel : PageModel
             return Page();
         }
 
-        _context.Records.Add(Record);
+        _context.Usuarios.Add(Usuario);
         await _context.SaveChangesAsync();
-        return RedirectToPage("List");
+        return RedirectToPage("ListUs");
     }
 }

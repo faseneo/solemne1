@@ -1,0 +1,34 @@
+
+@page
+@model ListEsModel
+@{
+    ViewData["Title"] = "List of Estudiantes";
+}
+
+<h2>Estudiantes</h2>
+<a asp-page="CreateEs">Nuevo Estudiante</a>
+<table>
+    <thead>
+        <tr>
+            <th>Nombre</th>
+            <th>Apellido</th>
+            <th>Email</th>
+            <th>Edad</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var Estudiante in Model.Estudiantes)
+        {
+            <tr>
+                <td>@Estudiante.Nombre</td>
+                <td>@Estudiante.Apellido</td>
+                <td>@Estudiante.Email</td>
+                <td>@Estudiante.Edad</td>
+                <td>
+                    <a asp-page="EditEs" asp-route-id="@Estudiante.Id">Editar</a>
+                    <a asp-page-handler="Delete" asp-route-id="@Estudiante.Id" onclick="return confirm('Estas Seguro?');">Borrar</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

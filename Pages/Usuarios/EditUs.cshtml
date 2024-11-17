@@ -1,0 +1,32 @@
+@page
+@model EditUsModel
+@{
+    ViewData["Title"] = "Edit Usuario";
+}
+
+<h2>Edit Usuarios</h2>
+
+<form method="post">
+    <input type="hidden" asp-for="Usuario.Id" />
+    <div>
+        <label>Nombre:</label>
+        <input asp-for="Usuario.Nombre" />
+    </div>
+    div>
+        <label>Apellido:</label>
+        <input asp-for="Usuario.Apellido" required />
+    </div>
+    <div>
+        <label>Email:</label>
+        <input asp-for="Usuario.Email" required />
+    </div>
+     <div>
+        <label>Password:</label>
+        <input asp-for="Usuario.Password" required />
+    </div>
+     <div>
+        <label>Rol:</label>
+        <input asp-for="Usuario.Rol" required />
+    </div>
+    <button type="submit">Save</button>
+</form>
