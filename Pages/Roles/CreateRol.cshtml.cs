@@ -12,7 +12,7 @@ public class CreateRolModel : PageModel
     }
 
     [BindProperty]
-    public Rol Rol { get; set; }
+    public Rol Rol { get; set; } = default!;
 
     public void OnGet()
     {
@@ -27,6 +27,6 @@ public class CreateRolModel : PageModel
 
         _context.Roles.Add(Rol);
         await _context.SaveChangesAsync();
-        return RedirectToPage("List");
+        return RedirectToPage("ListRol");
     }
 }

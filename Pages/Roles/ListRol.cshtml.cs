@@ -12,7 +12,6 @@ public class ListRolModel : PageModel
     {
         _context = context;
     }
-
     public List<Rol> Roles { get; set; } = new List<Rol>();
 
     public async Task OnGetAsync()

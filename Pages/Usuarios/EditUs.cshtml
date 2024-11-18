@@ -1,32 +1,32 @@
 @page
 @model EditUsModel
 @{
-    ViewData["Title"] = "Edit Usuario";
+    ViewData["Title"] = "Editar Usuario";
 }
-
-<h2>Edit Usuarios</h2>
-
+<h4>Edit Usuarios</h4>
 <form method="post">
     <input type="hidden" asp-for="Usuario.Id" />
-    <div>
-        <label>Nombre:</label>
-        <input asp-for="Usuario.Nombre" />
+    <div class="col-3">
+        <div class="mb-3">
+            <label class="form-label">Nombre</label>
+            <input asp-for="Usuario.Nombre" class="form-control" required />
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Apellido:</label>
+            <input asp-for="Usuario.Apellido" class="form-control" required />
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Email:</label>
+            <input asp-for="Usuario.Email" class="form-control" required />
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Contraseña:</label>
+            <input asp-for="Usuario.Password" class="form-control" required />
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Rol:</label>
+            <input asp-for="Usuario.Rol" class="form-control" required />
+        </div>
+        <button type="submit" class="btn btn-success">Guardar</button>
     </div>
-    div>
-        <label>Apellido:</label>
-        <input asp-for="Usuario.Apellido" required />
-    </div>
-    <div>
-        <label>Email:</label>
-        <input asp-for="Usuario.Email" required />
-    </div>
-     <div>
-        <label>Password:</label>
-        <input asp-for="Usuario.Password" required />
-    </div>
-     <div>
-        <label>Rol:</label>
-        <input asp-for="Usuario.Rol" required />
-    </div>
-    <button type="submit">Save</button>
 </form>

@@ -3,26 +3,26 @@
 @{
     ViewData["Title"] = "Edit Estudiante";
 }
-
-<h2>Edit Estudiante</h2>
-
+<h4>Editar Estudiante</h4>
 <form method="post">
     <input type="hidden" asp-for="Estudiante.Id" />
-    <div>
-        <label>Name:</label>
-        <input asp-for="Estudiante.Nombre" />
-    </div>
-    <div>
-        <label>Apellido:</label>
-        <input asp-for="Estudiante.Apellido" />
-    </div>
-    <div>
-        <label>Email:</label>
-        <input asp-for="Estudiante.Email" />
-    </div>
-    <div>
-        <label>Edad:</label>
-        <input asp-for="Estudiante.Edad" />
-    </div>
-    <button type="submit">Save</button>
+    <div class="col-3">
+        <div class="mb-3">
+            <label class="form-label">Nombre:</label>
+            <input asp-for="Estudiante.Nombre" class="form-control" required />
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Apellido:</label>
+            <input asp-for="Estudiante.Apellido" class="form-control" required />
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Email:</label>
+            <input asp-for="Estudiante.Email" class="form-control" required />
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Edad:</label>
+            <input asp-for="Estudiante.Edad" class="form-control" required />
+        </div>
+        <button type="submit" class="btn btn-success">Guardar</button>
+    </div>   
 </form>

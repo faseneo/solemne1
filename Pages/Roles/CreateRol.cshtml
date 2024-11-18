@@ -1,17 +1,17 @@
 @page
 @model CreateRolModel
 @{
-    ViewData["Title"] = "Create New Rol";
+    ViewData["Title"] = "Crear Nuevo Rol";
 }
 
-<h2>Create New Rol</h2>
+<h4>Crear Nuevo Rol</h4>
 
 <form method="post">
-    <div>
-        <label>Rol:</label>
-        <input asp-for="Rol.NombreRol" required />
+    <div class="col-3">
+        <div class="mb-3">
+            <label class="form-label">Rol:</label>
+            <input asp-for="Rol.NombreRol" class="form-control" required />
+        </div>
+        <button type="submit" class="btn btn-success">Crear</button>
     </div>
-  
-    <button type="submit">Create</button>
 </form>
- 

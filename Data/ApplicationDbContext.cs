@@ -9,9 +9,9 @@ public class ApplicationDbContext : IdentityDbContext
     }
 
     //public DbSet<Record> Records { get; set; }
-    public DbSet<Usuario> Usuarios { get; set; }
-    public DbSet<Estudiante> Estudiantes { get; set; }
-    public DbSet<Rol> Roles { get; set; }
+    public DbSet<Usuario> Usuarios { get; set; } = null!;
+    public DbSet<Estudiante> Estudiantes { get; set; } = null!;
+    public DbSet<Rol> Roles { get; set; } = null!;
 }
 
 /*public class Record
@@ -25,24 +25,24 @@ public class ApplicationDbContext : IdentityDbContext
 public class Usuario
     {
         public int Id { get; set; }
-        public  string Nombre { get; set; } 
-        public  string Apellido { get; set; } 
-        public  string Email { get; set; }
-        public  string Password { get; set; }
-        public  string Rol { get; set; } // Valor: "Profesor" o "Jefe Carrera"
+        public  string Nombre { get; set; }  = string.Empty;
+        public  string Apellido { get; set; }  = string.Empty;
+        public  string Email { get; set; }  = string.Empty;
+        public  string Password { get; set; }  = string.Empty;
+        public  string Rol { get; set; }  = string.Empty; // Valor: "Profesor" o "Jefe Carrera"
     }
 
 public class Estudiante
     {
         public int Id { get; set; }
-        public string Nombre { get; set; }
-        public string Apellido { get; set; }
-        public string Email { get; set; }
+        public string Nombre { get; set; }  = string.Empty;
+        public string Apellido { get; set; }  = string.Empty;
+        public string Email { get; set; }  = string.Empty;
         public int Edad { get; set; }
     }
 
     public class Rol
     {
         public int Id { get; set; }
-        public string NombreRol { get; set; }
+        public string NombreRol { get; set; }  = string.Empty;
     }

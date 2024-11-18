@@ -1,16 +1,18 @@
 @page
 @model EditRolModel
 @{
-    ViewData["Title"] = "Edit Rol";
+    ViewData["Title"] = "Editar Rol";
 }
 
-<h2>Edit Rol</h2>
+<h4>Editar Rol</h4>
 
 <form method="post">
     <input type="hidden" asp-for="Rol.Id" />
-    <div>
-        <label>Rol:</label>
-        <input asp-for="Rol.NombreRol" />
+    <div class="col-3">
+        <div class="mb-3">
+            <label class="form-label">Rol:</label>
+            <input asp-for="Rol.NombreRol" class="form-control" required />
+        </div>
+        <button type="submit" class="btn btn-success">Guardar</button>
     </div>
-    <button type="submit">Save</button>
 </form>

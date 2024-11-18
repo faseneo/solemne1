@@ -1,20 +1,23 @@
-
 @page
 @model ListUsModel
 @{
-    ViewData["Title"] = "List of Usuarios";
+    ViewData["Title"] = "Listado de Usuarios";
 }
 
-<h2>Usuarios</h2>
-<a asp-page="CreateUs">Nuevo Usuario</a>
-<table>
+<h4>Usuarios</h4>
+<a asp-page="CreateUs">
+    <button type="button" class="btn btn-primary">Nuevo Usuario</button>
+</a>
+
+<table class="table table-striped table-hover">
     <thead>
         <tr>
-            <th>Nombre</th>
-            <th>Apellido</th>
-            <th>Email</th>
-            <th>Password</th>
-            <th>Rol</th>
+            <th scope="col">Nombre</th>
+            <th scope="col">Apellido</th>
+            <th scope="col">Email</th>
+            <th scope="col">Password</th>
+            <th scope="col">Rol</th>
+            <th scope="col">Acciones</th>
         </tr>
     </thead>
     <tbody>
@@ -27,8 +30,12 @@
                 <td>@Usuario.Password</td>
                 <td>@Usuario.Rol</td>
                 <td>
-                    <a asp-page="EditUs" asp-route-id="@Usuario.Id">Editar</a>
-                    <a asp-page-handler="Delete" asp-route-id="@Usuario.Id" onclick="return confirm('Estas Seguro?');">Borrar</a>
+                    <a asp-page="EditUs" asp-route-id="@Usuario.Id" class="btn btn-warning">
+                        Editar
+                    </a>
+                    <a asp-page-handler="Delete" asp-route-id="@Usuario.Id" class="btn btn-danger" onclick="return confirm('Estas Seguro?');">
+                        Borrar
+                    </a>
                 </td>
             </tr>
         }

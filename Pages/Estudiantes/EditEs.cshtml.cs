@@ -13,7 +13,7 @@ public class EditEsModel : PageModel
     }
 
     [BindProperty]
-    public Estudiante Estudiante { get; set; }
+    public Estudiante Estudiante { get; set; } = default!;
 
     public async Task<IActionResult> OnGetAsync(int id)
     {
@@ -34,6 +34,6 @@ public class EditEsModel : PageModel
 
         _context.Attach(Estudiante).State = EntityState.Modified;
         await _context.SaveChangesAsync();
-        return RedirectToPage("List");
+        return RedirectToPage("ListEs");
     }
 }

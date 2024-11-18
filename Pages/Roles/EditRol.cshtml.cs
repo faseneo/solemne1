@@ -13,7 +13,7 @@ public class EditRolModel : PageModel
     }
 
     [BindProperty]
-    public Rol Rol { get; set; }
+    public Rol Rol { get; set; } = default!;
 
     public async Task<IActionResult> OnGetAsync(int id)
     {
@@ -34,6 +34,6 @@ public class EditRolModel : PageModel
 
         _context.Attach(Rol).State = EntityState.Modified;
         await _context.SaveChangesAsync();
-        return RedirectToPage("List");
+        return RedirectToPage("ListRol");
     }
 }

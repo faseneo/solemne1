@@ -9,6 +9,7 @@ public class LoginModel : PageModel
 
     [BindProperty]
     public string Password { get; set; }
+    [BindProperty]
     public string ErrorMessage { get; private set; }
 
     public void OnGet()
@@ -21,17 +22,19 @@ public class LoginModel : PageModel
         if (ModelState.IsValid)
         {
             // logica para inicio de sesión
-            if (Email == "test@example.com" && Password == "Password123")
+            if (Email == "test@example.com" && Password == "pass123")
             {
                 // Redirect to a secure area after successful login
                 return RedirectToPage("/Dashboard");
             }else{
-                ErrorMessage = "Invalid login attempt.";
+                ErrorMessage = "Inicio de sesion no Valido";
                 return Page();
                 /*return RedirectToPage("/Index"); // Redirige al dashboard*/
             }
 
             
+        }else{
+             return RedirectToPage("/Dashboard");
         }
 
         // Si hay errores, se vuelve a mostrar el formulario de inicio de sesión

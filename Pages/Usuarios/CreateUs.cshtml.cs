@@ -12,7 +12,7 @@ public class CreateUsModel : PageModel
     }
 
     [BindProperty]
-    public Usuario Usuario { get; set; }
+    public Usuario Usuario { get; set; } = default!;
 
     public void OnGet()
     {

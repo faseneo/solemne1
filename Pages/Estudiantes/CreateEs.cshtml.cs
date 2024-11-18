@@ -12,7 +12,7 @@ public class CreateEsModel : PageModel
     }
 
     [BindProperty]
-    public Estudiante Estudiante { get; set; }
+    public Estudiante Estudiante { get; set; } = default!;
 
     public void OnGet()
     {
@@ -27,6 +27,6 @@ public class CreateEsModel : PageModel
 
         _context.Estudiantes.Add(Estudiante);
         await _context.SaveChangesAsync();
-        return RedirectToPage("List");
+        return RedirectToPage("ListEs");
     }
 }

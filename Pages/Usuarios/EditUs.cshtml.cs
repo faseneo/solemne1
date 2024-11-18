@@ -13,7 +13,7 @@ public class EditUsModel : PageModel
     }
 
     [BindProperty]
-    public Usuario Usuario { get; set; }
+    public Usuario Usuario { get; set; } = default!;
 
     public async Task<IActionResult> OnGetAsync(int id)
     {
