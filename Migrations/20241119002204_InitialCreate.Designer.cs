@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace solemne1.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20241118011737_InitialCreate")]
+    [Migration("20241119002204_InitialCreate")]
     partial class InitialCreate
     {
         /// <inheritdoc />
