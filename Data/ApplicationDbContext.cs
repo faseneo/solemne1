@@ -8,20 +8,13 @@ public class ApplicationDbContext : IdentityDbContext
     {
     }
 
-    //public DbSet<Record> Records { get; set; }
+    // Declaracion de tablas Usuario, Estudiantes y Rol
     public DbSet<Usuario> Usuarios { get; set; } = null!;
     public DbSet<Estudiante> Estudiantes { get; set; } = null!;
     public DbSet<Rol> Roles { get; set; } = null!;
 }
 
-/*public class Record
-{
-    public int Id { get; set; }
-    public string Name { get; set; }
-    public string Description { get; set; }
-}
-*/
-
+// Declaracion de clase usuario
 public class Usuario
     {
         public int Id { get; set; }
@@ -32,6 +25,7 @@ public class Usuario
         public  string Rol { get; set; }  = string.Empty; // Valor: "Profesor" o "Jefe Carrera"
     }
 
+// Declaracion de clase Estudiante
 public class Estudiante
     {
         public int Id { get; set; }
@@ -41,6 +35,7 @@ public class Estudiante
         public int Edad { get; set; }
     }
 
+// Declaracion de clase Rol
     public class Rol
     {
         public int Id { get; set; }

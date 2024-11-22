@@ -17,7 +17,8 @@ public class CreateRolModel : PageModel
     public void OnGet()
     {
     }
-
+    
+    //Logica para agregar Rol
     public async Task<IActionResult> OnPostAsync()
     {
         if (!ModelState.IsValid)

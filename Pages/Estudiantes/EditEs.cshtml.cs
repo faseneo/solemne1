@@ -15,6 +15,7 @@ public class EditEsModel : PageModel
     [BindProperty]
     public Estudiante Estudiante { get; set; } = default!;
 
+    //Logica para buscar Estudiante
     public async Task<IActionResult> OnGetAsync(int id)
     {
         Estudiante = await _context.Estudiantes.FindAsync(id);
@@ -25,6 +26,7 @@ public class EditEsModel : PageModel
         return Page();
     }
 
+    //Logica para grabar datos modificados del Estudiante
     public async Task<IActionResult> OnPostAsync()
     {
         if (!ModelState.IsValid)

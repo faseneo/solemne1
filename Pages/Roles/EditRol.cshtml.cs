@@ -15,6 +15,7 @@ public class EditRolModel : PageModel
     [BindProperty]
     public Rol Rol { get; set; } = default!;
 
+    //Logica para buscar Roles
     public async Task<IActionResult> OnGetAsync(int id)
     {
         Rol = await _context.Roles.FindAsync(id);
@@ -25,6 +26,7 @@ public class EditRolModel : PageModel
         return Page();
     }
 
+    //Logica para grabar datos modificados del Rol
     public async Task<IActionResult> OnPostAsync()
     {
         if (!ModelState.IsValid)

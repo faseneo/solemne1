@@ -17,7 +17,7 @@ public class CreateUsModel : PageModel
     public void OnGet()
     {
     }
-
+    //Logica para agregar Usuarios
     public async Task<IActionResult> OnPostAsync()
     {
         if (!ModelState.IsValid)

@@ -17,7 +17,8 @@ public class CreateEsModel : PageModel
     public void OnGet()
     {
     }
-
+    
+    //Logica para agregar Estudiante
     public async Task<IActionResult> OnPostAsync()
     {
         if (!ModelState.IsValid)

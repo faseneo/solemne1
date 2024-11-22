@@ -12,8 +12,11 @@ public class ListRolModel : PageModel
     {
         _context = context;
     }
+
+    //Crea lista de objetos de tipo Rol 
     public List<Rol> Roles { get; set; } = new List<Rol>();
 
+    //Logica para cargar listado de estudiantes desde la base de datos
     public async Task OnGetAsync()
     {
         Roles = await _context.Roles.ToListAsync(); // Carga los registros desde la base de datos

@@ -12,14 +12,16 @@ public class ListUsModel : PageModel
     {
         _context = context;
     }
-
+    //Crea lista de objetos de tipo Usuarios 
     public List<Usuario> Usuarios { get; set; } = new List<Usuario>();
 
+    //Logica para cargar listado de usuarios desde la base de datos
     public async Task OnGetAsync()
     {
-        Usuarios = await _context.Usuarios.ToListAsync(); // Carga los registros desde la base de datos
+        Usuarios = await _context.Usuarios.ToListAsync(); 
     }
 
+    //Logica para eliminar Usuario 
     public async Task<IActionResult> OnGetDeleteAsync(int id)
     {
         var usuario = await _context.Usuarios.FindAsync(id);

@@ -15,6 +15,7 @@ public class EditUsModel : PageModel
     [BindProperty]
     public Usuario Usuario { get; set; } = default!;
 
+    //Logica para buscar Usuario 
     public async Task<IActionResult> OnGetAsync(int id)
     {
         Usuario = await _context.Usuarios.FindAsync(id);
@@ -24,7 +25,7 @@ public class EditUsModel : PageModel
         }
         return Page();
     }
-
+    //Logica para grabar datos modificados del Usuario 
     public async Task<IActionResult> OnPostAsync()
     {
         if (!ModelState.IsValid)
